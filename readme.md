@@ -34,6 +34,7 @@ func main() {
     tout.SetFont(tout.BoldFont | tout.UnderlineFont)
     tout.Println("This is bold red underlined text")
     tout.ResetForeground()
+	tout.ResetFont()
     tout.Println("This is default text")
 }
 ```
