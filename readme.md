@@ -30,9 +30,9 @@ import (
 )
 
 func main() {
-    tout.SetDefaultCursor(tout.NewCursor())
     tout.Foreground(color16.Red)
-    tout.Println("This is red text")
+    tout.SetFont(tout.BoldFont | tout.UnderlineFont)
+    tout.Println("This is bold red underlined text")
     tout.ResetForeground()
     tout.Println("This is default text")
 }
@@ -45,13 +45,17 @@ import "github.com/tpacheco/tout/color24"
 
 tout.Foreground(color24.Magenta)
 tout.Println("This is magenta text")
-tout.ResetForeground()
+
+tout.Foreground(color24.RGB(128,128,128))
+tout.Println("This is grey text")
+
+tout.Foreground(color24.Hex("#00ffd7"))
+tout.Println("This is bright teal text")
 ```
 
 ### Error Output
 
 ```go
-tout.SetErrorCursor(tout.NewCursor())
 tout.Errorln("This is an error message")
 ```
 
