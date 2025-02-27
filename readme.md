@@ -14,7 +14,7 @@
 To install the `tout` package, use the following command:
 
 ```sh
-go get github.com/tpacheco/tout
+go get github.com/pachecot/tout
 ```
 
 ## Usage
@@ -25,8 +25,8 @@ go get github.com/tpacheco/tout
 package main
 
 import (
-    "github.com/tpacheco/tout"
-    "github.com/tpacheco/tout/color16"
+    "github.com/pachecot/tout"
+    "github.com/pachecot/tout/color16"
 )
 
 func main() {
@@ -41,7 +41,7 @@ func main() {
 ### Setting Colors
 
 ```go
-import "github.com/tpacheco/tout/color24"
+import "github.com/pachecot/tout/color24"
 
 tout.Foreground(color24.Magenta)
 tout.Println("This is magenta text")
@@ -61,7 +61,7 @@ tout.Errorln("This is an error message")
 
 ## Documentation
 
-For detailed documentation, please refer to the [GoDoc](https://pkg.go.dev/github.com/tpacheco/tout).
+For detailed documentation, please refer to the [GoDoc](https://pkg.go.dev/github.com/pachecot/tout).
 
 ## License
 
