@@ -34,7 +34,7 @@ func main() {
     tout.SetFont(tout.BoldFont | tout.UnderlineFont)
     tout.Println("This is bold red underlined text")
     tout.ResetForeground()
-	tout.ResetFont()
+    tout.ResetFont()
     tout.Println("This is default text")
 }
 ```
@@ -52,6 +52,19 @@ tout.Println("This is grey text")
 
 tout.Foreground(color24.Hex("#00ffd7"))
 tout.Println("This is bright teal text")
+```
+
+### Using a Cursor
+
+```go
+import "github.com/pachecot/tout/color24"
+
+    c := tout.NewCursor(os.Stdout)
+    c.Foreground(color24.ColdCanada)
+    c.Println("ColdCanada")
+    c.Font |= tout.BoldFont | tout.UnderlineFont | tout.ReversedFont
+    c.Background(color24.OrangeBrown)
+    c.Println("Reversed ColdCanada & OrangeBrown")
 ```
 
 ### Error Output
