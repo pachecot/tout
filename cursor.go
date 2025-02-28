@@ -58,7 +58,12 @@ type Cursor struct {
 
 // NewCursor creates a new Cursor with the specified writer.
 // It detects the color support level of the writer if it is a file.
+//
+// If the writer is nil, it uses os.Stdout as the default writer.
 func NewCursor(w io.Writer) *Cursor {
+	if w == nil {
+		w = os.Stdout
+	}
 	if f, ok := w.(*os.File); ok {
 		support := supportscolor.SupportsColor(f.Fd())
 		return &Cursor{
